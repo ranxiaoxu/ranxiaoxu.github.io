@@ -179,19 +179,10 @@
 <ol>
 <li>wget -O /etc/yum.repos.d/jenkins.repo <a href="http://pkg.jenkins-ci.org/redhat/jenkins.repo" target="_blank" rel="noopener">http://pkg.jenkins-ci.org/redhat/jenkins.repo</a></li>
 <li>rpm –import <a href="https://jenkins-ci.org/redhat/jenkins-ci.org.key" target="_blank" rel="noopener">https://jenkins-ci.org/redhat/jenkins-ci.org.key</a></li>
-<li>yum install -y jenkins</li>
-</ol>
-<ul>
-<li>设置端口号</li>
-</ul>
-<ol>
-<li>lsof -i:端口号 查看某一端口号是否被占用</li>
-<li>vim /etc/sysconfig/jenkins<br>修改JENKINS_PORT</li>
-</ol>
-<ul>
-<li>启动<br>service jenkins start</li>
-</ul>
-
+<li>yum install -y jenkins
+        
+          <a class="article-more-a" href="/2018/11/12/jenkins安装记录/#more">more >></a>
+        
       
 
       
@@ -199,6 +190,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jenkins</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -329,7 +331,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1，下载findler"><a href="#1，下载findler" class="headerlink" title="1，下载findler "></a>1，下载findler
+        <h5 id="1，下载findler"><a href="#1，下载findler" class="headerlink" title="1，下载findler"></a>1，下载findler</h5><h5 id="2，设置findler"><a href="#2，设置findler" class="headerlink" title="2，设置findler"></a>2，设置findler</h5><p>打开Tools-&gt;Options 在connetions目录下勾选Allow remote computers to connet<br>重启findler，这样配置才会生效<br>
         
           <a class="article-more-a" href="/2018/05/16/Findler设置手机代理/#more">more >></a>
         
@@ -394,7 +396,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用语言Python，环境Windows<br>
+        <p>使用语言Python，环境Windows</p>
+<h5 id="1-安装selenium"><a href="#1-安装selenium" class="headerlink" title="1.安装selenium"></a>1.安装selenium</h5><p>输入命令 pip install selenium</p>
+<h5 id="2-下载webdriver"><a href="#2-下载webdriver" class="headerlink" title="2.下载webdriver"></a>2.下载webdriver</h5><p>安装所要使用的浏览器的webdriver,我下载的是chrome的webdriver,将解压后的webdriver.exe放到某路径下，并将该路径配置到环境变量中<br>
         
           <a class="article-more-a" href="/2018/05/07/selenium学习-安装/#more">more >></a>
         
@@ -459,7 +463,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在github上看到一个xmind转testlink的工具，感觉以后可能会用到
+        <p>在github上看到一个xmind转testlink的工具，感觉以后可能会用到  </p>
+<h5 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h5><p>1.git clone <a href="https://github.com/tobyqin/xmind2testlink.git" target="_blank" rel="noopener">https://github.com/tobyqin/xmind2testlink.git</a><br>2.cd path/xmind2testlink/web<br>
         
           <a class="article-more-a" href="/2018/05/02/xmind转testlink工具/#more">more >></a>
         
@@ -833,6 +838,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jenkins</a>
               </li>
              
               <li class="article-tag-list-item">

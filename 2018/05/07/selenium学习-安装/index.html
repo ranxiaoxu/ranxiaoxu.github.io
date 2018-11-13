@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>selenium学习-安装 | 冉小栩的成长记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用语言Python，环境Windows">
+  <meta name="description" content="使用语言Python，环境Windows 1.安装selenium输入命令 pip install selenium 2.下载webdriver安装所要使用的浏览器的webdriver,我下载的是chrome的webdriver,将解压后的webdriver.exe放到某路径下，并将该路径配置到环境变量中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selenium学习-安装">
 <meta property="og:url" content="http://yoursite.com/2018/05/07/selenium学习-安装/index.html">
 <meta property="og:site_name" content="冉小栩的成长记录">
-<meta property="og:description" content="使用语言Python，环境Windows">
+<meta property="og:description" content="使用语言Python，环境Windows 1.安装selenium输入命令 pip install selenium 2.下载webdriver安装所要使用的浏览器的webdriver,我下载的是chrome的webdriver,将解压后的webdriver.exe放到某路径下，并将该路径配置到环境变量中">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-12T11:42:10.643Z">
+<meta property="og:updated_time" content="2018-11-13T02:32:01.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium学习-安装">
-<meta name="twitter:description" content="使用语言Python，环境Windows">
+<meta name="twitter:description" content="使用语言Python，环境Windows 1.安装selenium输入命令 pip install selenium 2.下载webdriver安装所要使用的浏览器的webdriver,我下载的是chrome的webdriver,将解压后的webdriver.exe放到某路径下，并将该路径配置到环境变量中">
   
     <link rel="alternative" href="/atom.xml" title="冉小栩的成长记录" type="application/atom+xml">
   
@@ -174,9 +174,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用语言Python，环境Windows<br><a id="more"></a></p>
+        <p>使用语言Python，环境Windows</p>
 <h5 id="1-安装selenium"><a href="#1-安装selenium" class="headerlink" title="1.安装selenium"></a>1.安装selenium</h5><p>输入命令 pip install selenium</p>
-<h5 id="2-下载webdriver"><a href="#2-下载webdriver" class="headerlink" title="2.下载webdriver"></a>2.下载webdriver</h5><p>安装所要使用的浏览器的webdriver,我下载的是chrome的webdriver,将解压后的webdriver.exe放到某路径下，并将该路径配置到环境变量中</p>
+<h5 id="2-下载webdriver"><a href="#2-下载webdriver" class="headerlink" title="2.下载webdriver"></a>2.下载webdriver</h5><p>安装所要使用的浏览器的webdriver,我下载的是chrome的webdriver,将解压后的webdriver.exe放到某路径下，并将该路径配置到环境变量中<br><a id="more"></a></p>
 <h5 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h5><p>运行测试用例还需要使用Python的自动化测试框架unitest<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.chrome.options import Options</span><br><span class="line">import time</span><br><span class="line">import unittest</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class test(unittest.TestCase):</span><br><span class="line"></span><br><span class="line">def setUp(self):</span><br><span class="line">mobile_emulation = &#123;&quot;deviceName&quot;: &quot;Galaxy S5&quot;&#125;</span><br><span class="line">options = Options()</span><br><span class="line">options.add_experimental_option(&quot;mobileEmulation&quot;, mobile_emulation)</span><br><span class="line">self.driver = webdriver.Chrome(executable_path=&quot;C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe&quot;,chrome_options=options)</span><br><span class="line"></span><br><span class="line">def tearDown(self):</span><br><span class="line"></span><br><span class="line">self.driver.quit()</span><br><span class="line"></span><br><span class="line">def test_01(self):</span><br><span class="line">self.driver.get(&apos;https://www.baidu.com&apos;)</span><br><span class="line">time.sleep(5)</span><br><span class="line"></span><br><span class="line">if __name__==&apos;__main__&apos;:</span><br><span class="line"></span><br><span class="line">unittest.main()</span><br></pre></td></tr></table></figure></p>
 <p>配置了环境变量，但是提示 Message: ‘chromedriver’ executable needs to be in PATH.所以写了chromedriver的全路径<br>chrome_options设置浏览器启动后以手机模式展示<br>正常启动浏览器只需要写self.driver = webdriver.Chrome()</p>
 
@@ -410,6 +410,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jenkins</a>
               </li>
              
               <li class="article-tag-list-item">
