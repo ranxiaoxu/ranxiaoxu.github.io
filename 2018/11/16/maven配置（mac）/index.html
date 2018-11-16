@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jira接口访问 | 冉小栩的成长记录</title>
+  <title>maven配置（mac） | 冉小栩的成长记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jira是用来管理事务的跟踪工具，最近由于工作需要，需要统计jira上的数据，每次通过条件筛选再导出的方法太麻烦，就学习了一下jira的接口，下面是一个简单的例子。">
+  <meta name="description" content="官网下载http://maven.apache.org/download.cgiapache-maven-3.6.0-bin.tar.gz 解压tar zxvf  配置环境变量">
+<meta name="keywords" content="maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jira接口访问">
-<meta property="og:url" content="http://yoursite.com/2018/04/28/jira接口访问/index.html">
+<meta property="og:title" content="maven配置（mac）">
+<meta property="og:url" content="http://yoursite.com/2018/11/16/maven配置（mac）/index.html">
 <meta property="og:site_name" content="冉小栩的成长记录">
-<meta property="og:description" content="jira是用来管理事务的跟踪工具，最近由于工作需要，需要统计jira上的数据，每次通过条件筛选再导出的方法太麻烦，就学习了一下jira的接口，下面是一个简单的例子。">
+<meta property="og:description" content="官网下载http://maven.apache.org/download.cgiapache-maven-3.6.0-bin.tar.gz 解压tar zxvf  配置环境变量">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-12T11:42:10.643Z">
+<meta property="og:updated_time" content="2018-11-16T06:15:47.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jira接口访问">
-<meta name="twitter:description" content="jira是用来管理事务的跟踪工具，最近由于工作需要，需要统计jira上的数据，每次通过条件筛选再导出的方法太麻烦，就学习了一下jira的接口，下面是一个简单的例子。">
+<meta name="twitter:title" content="maven配置（mac）">
+<meta name="twitter:description" content="官网下载http://maven.apache.org/download.cgiapache-maven-3.6.0-bin.tar.gz 解压tar zxvf  配置环境变量">
   
     <link rel="alternative" href="/atom.xml" title="冉小栩的成长记录" type="application/atom+xml">
   
@@ -154,27 +155,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jira接口访问" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-maven配置（mac）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jira接口访问
+      maven配置（mac）
     </h1>
   
 
         
-        <a href="/2018/04/28/jira接口访问/" class="archive-article-date">
-  	<time datetime="2018-04-28T09:18:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-28</time>
+        <a href="/2018/11/16/maven配置（mac）/" class="archive-article-date">
+  	<time datetime="2018-11-16T06:14:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>jira是用来管理事务的跟踪工具，最近由于工作需要，需要统计jira上的数据，每次通过条件筛选再导出的方法太麻烦，就学习了一下jira的接口，下面是一个简单的例子。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def index(jql)：</span><br><span class="line">  username = &apos;test&apos;</span><br><span class="line">  password = &apos;test&apos;</span><br><span class="line">  userpass = username+&apos;:&apos;+password</span><br><span class="line">  encodestr = base64.b64encode(userpass.encode())</span><br><span class="line"></span><br><span class="line">  tmp1 = jql</span><br><span class="line">  param1 = urllib.parse.quote(tmp1)</span><br><span class="line"></span><br><span class="line">  headers =&#123;&quot;Content-Type&quot;:&quot;application/json&quot;,&quot;Authorization&quot;:&quot;Basic &quot;+encodestr.decode()&#125;</span><br><span class="line">  conn = http.client.HTTPConnection(&quot;xxxxxxx&quot;)</span><br><span class="line">  params1 = &quot;/rest/api/2/search?maxResults=%s&amp;jql=%s&quot;%(200,param1)</span><br><span class="line">  conn.request(&quot;GET&quot;,params1,None,headers)</span><br><span class="line">  r1 = conn.getresponse()</span><br><span class="line">  data1 = r1.read()</span><br><span class="line">  data_json1=json.loads(data1.decode())</span><br><span class="line">  print(data_json1)</span><br></pre></td></tr></table></figure></p>
+        <ul>
+<li>官网下载<br><a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a><br>apache-maven-3.6.0-bin.tar.gz</li>
+<li>解压<br>tar zxvf </li>
+<li>配置环境变量<a id="more"></a>
+vim ~/.bash_profile<br>export M2_HOME=解压缩后的路径<br>export PATH=$PATH:$M2_HOME/bin<br>source ~/.bash_profile</li>
+<li>查看配置是否生效<br>mvn -v</li>
+<li>copy公司的maven配置到conf/setting文件中</li>
+<li>IDEA中修改maven的home路径和setting文件路径（Preference-&gt;maven）</li>
+</ul>
 
       
 
@@ -204,6 +213,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -254,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/28/jira接口访问/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/16/maven配置（mac）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +288,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/02/xmind转testlink工具/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          xmind转testlink工具
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/28/python处理Excel表/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python处理Excel表</div>
+    <a href="/2018/11/13/django中使用多个数据库配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">django中使用多个数据库配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
