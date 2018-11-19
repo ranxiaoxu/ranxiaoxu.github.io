@@ -152,6 +152,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-jenkins上下级项目参数传递" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/19/jenkins上下级项目参数传递/">jenkins上下级项目参数传递</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/19/jenkins上下级项目参数传递/" class="archive-article-date">
+  	<time datetime="2018-11-19T07:36:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="1-下载Parameterized-Trigger插件"><a href="#1-下载Parameterized-Trigger插件" class="headerlink" title="1.下载Parameterized Trigger插件"></a>1.下载Parameterized Trigger插件</h6><h6 id="2-常用的选项"><a href="#2-常用的选项" class="headerlink" title="2.常用的选项"></a>2.常用的选项</h6><ul>
+<li>Current build parameters<br>将本次构建的参数传递给下级项目，下级项目中需要配置这些参数，并且参数名要保持一致</li>
+<li>Predefined parameters预定义参数<br>写法：param=${predefined param}，同样下级项目中需要配置这些参数，并且参数名要保持一致<br>所有预定义参数：<br>BRANCH_NAME（正在构建的分支的名称）<br>CHANGE_ID<br>CHANGE_ID<br>CHANGE_TITLE<br>CHANGE_AUTHOR<br>CHANGE_AUTHOR_DISPLAY_NAME<br>CHANGE_AUTHOR_EMAIL<br>CHANGE_TARGET<br>BUILD_NUMBER（当前构建的编号）<br>BUILD_ID<br>BUILD_DISPLAY_NAME<br>JOB_NAME（当前构建的项目名）<br>JOB_BASE_NAME<br>BUILD_TAG<br>EXECUTOR_NUMBER<br>NODE_NAME<br>NODE_LABELS<br>WORKSPACE（构建的绝对路径）<br>JENKINS_HOME<br>JENKINS_URL<br>BUILD_URL<br>JOB_URL<br>GIT_COMMIT<br>GIT_PREVIOUS_COMMIT<br>GIT_PREVIOUS_SUCCESSFUL_COMMIT<br>GIT_BRANCH<br>GIT_LOCAL_BRANCH<br>GIT_URL<br>GIT_COMMITTER_NAME<br>GIT_AUTHOR_NAME<br>GIT_COMMITTER_EMAIL<br>GIT_AUTHOR_EMAIL<br>SVN_REVISION<br>SVN_URL</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/19/jenkins上下级项目参数传递/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-maven配置（mac）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -816,89 +882,10 @@
 
 
   
-    <article id="post-Hexo备份" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/27/Hexo备份/">Hexo备份</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/27/Hexo备份/" class="archive-article-date">
-  	<time datetime="2018-04-27T07:03:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>由于换了电脑，要重新部署hexo，之前的配置和博客内容又要重新搞了，头疼啊。。。幸而之前写的博客不多，为了预防下次再出现这样的情况，还是先做好备份~</p>
-<hr>
-<p>在网上看到比较多的解决方法是在github上创建两个分支，一个分支管理hexo的配置信息，一个分支管理生成的静态网页。<br>大致步骤如下：</p>
-<ul>
-<li><strong>创建新的分支</strong> ：在github上创建一个新的分支，本地创建一个对应的分支；</li>
-<li><strong>提交源代码</strong>：每次hexo d 之前先把所有的代码都用git命令提交到新分支上（需要先merge），再执行hexo d；</li>
-</ul>
-<p>这样的缺点是每次要切换分支，要merge，感觉比较乱。</p>
-<hr>
-<p>既然是要备份，那直接重新建一个仓库，把源文件和静态网页分开放岂不更简单~~~~<br>选择了coding存放hexo的源代码。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/27/Hexo备份/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -992,11 +979,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1004,11 +991,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
