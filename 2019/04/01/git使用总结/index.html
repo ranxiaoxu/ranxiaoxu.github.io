@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 冉小栩的成长记录</title>
+  <title>git使用总结 | 冉小栩的成长记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="冉小栩的成长记录">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
+  <meta name="description" content="基本概念 工作区：就是你在电脑里能看到的目录。 暂存区：一般存放在 “.git目录下” 下的index文件（.git/index）中 忽略文件：.gitignore 记录不需要被git管理的文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git使用总结">
+<meta property="og:url" content="http://yoursite.com/2019/04/01/git使用总结/index.html">
 <meta property="og:site_name" content="冉小栩的成长记录">
+<meta property="og:description" content="基本概念 工作区：就是你在电脑里能看到的目录。 暂存区：一般存放在 “.git目录下” 下的index文件（.git/index）中 忽略文件：.gitignore 记录不需要被git管理的文件">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-01T08:16:14.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冉小栩的成长记录">
+<meta name="twitter:title" content="git使用总结">
+<meta name="twitter:description" content="基本概念 工作区：就是你在电脑里能看到的目录。 暂存区：一般存放在 “.git目录下” 下的index文件（.git/index）中 忽略文件：.gitignore 记录不需要被git管理的文件">
   
     <link rel="alternative" href="/atom.xml" title="冉小栩的成长记录" type="application/atom+xml">
   
@@ -150,63 +154,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git使用总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/27/Hexo备份/" class="archive-article-date">
-  	<time datetime="2018-04-27T07:03:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/27/Hexo备份/">Hexo备份</a>
+    <h1 class="article-title" itemprop="name">
+      git使用总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2019/04/01/git使用总结/" class="archive-article-date">
+  	<time datetime="2019-04-01T08:02:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
+<li>工作区：就是你在电脑里能看到的目录。</li>
+<li>暂存区：一般存放在 “.git目录下” 下的index文件（.git/index）中</li>
+<li>忽略文件：.gitignore 记录不需要被git管理的文件<a id="more"></a>
+<h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5></li>
+<li>git clone</li>
+<li>git add <file> 添加文件到暂存区</file></li>
+<li>git commit -m <message> 提交暂存区的文件到仓库</message></li>
+<li>git pull（git fetch+git merge）</li>
+<li>git fetch &lt;远程主机名&gt;&lt;分支名&gt; 将远程主机的更新全部拉回本地,无参数默认更新所有分支</li>
+<li>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</li>
+<li>git diff <file> 比较暂存区和工作目录下的文件差异</file></li>
+<li>git log 展示历史提交</li>
+<li>git status 查看文件当前处于什么状态</li>
+<li>git reflog 查看操作记录</li>
+</ul>
+<h5 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h5><p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
+<ul>
+<li>git branch 列出本地的分支</li>
+<li>git branch <branchname> 创建分支，无参数时，会列出你在本地的分支。</branchname></li>
+<li>git checkout <branchname> 切换分支</branchname></li>
+<li>git branch -d <branchname> 删除分支</branchname></li>
+<li>git merge <branchname> 合并分支，将某一分支合并到当前分支</branchname></li>
+</ul>
+<h5 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h5><ul>
+<li>为什么会发生冲突？不同分支，修改同一个文件同一代码块</li>
+<li>解决冲突的步骤（修改冲突代码—&gt;add—&gt;commit—&gt;push）</li>
+</ul>
+<h5 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h5><ul>
+<li>放弃更改：git checkout – <file>  </file></li>
+<li>回滚添加：git reset HEAD <file></file></li>
+<li>回滚提交：git reset —soft/—mixed/–hard HEAD^</li>
+<li>远程仓库回滚：git push -f </li>
+<li>回到未来的某一个版本：git reset —hard <commitid></commitid></li>
+</ul>
+<h5 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h5><ol>
+<li>git clone 克隆远程资源到本地目录，作为工作目录</li>
+<li>然后在本地的克隆目录上添加或修改文件</li>
+<li>如果远程修改了，需要同步远程的内容，直接git pull就可以更新本地的文件</li>
+<li>本地在修改之后，可以通过git status 查看修改的文件。然后使用git add 添加修改的文件暂到缓冲区</li>
+<li>在添加之后，可以使用git commit添加到当前的工作区</li>
+<li>在修改完成后，如果发现错误，可以撤回提交并再次修改并提交</li>
+<li>git push将本地的修改推送到远程的git服务器。</li>
+<li>如果push失败，执行git pull在本地解决冲突，再add、commit、push</li>
+</ol>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ul>
+<li><a href="http://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/git/git-tutorial.html</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
+<li><a href="https://git-scm.com/book/zh/v1/" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/</a></li>
+<li><a href="https://www.yiibai.com/" target="_blank" rel="noopener">https://www.yiibai.com/</a></li>
+</ul>
 
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/01/git使用总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/03/01/vue动态添加input框/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue动态添加input框</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -230,8 +376,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
