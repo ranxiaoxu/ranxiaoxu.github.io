@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Spring定时任务 | 冉小栩的成长记录</title>
+  <title>ansible学习笔记-自定义module | 冉小栩的成长记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="添加配置xmlns:task=”http://www.springframework.org/schema/task&amp;quot;xsi:http://www.springframework.org/schema/taskhttp://www.springframework.org/schema/task/spring-task-3.2.xsd&amp;lt;context:component-scan b">
-<meta name="keywords" content="java,Spring">
+  <meta name="description" content="配置自定义模块位置 编写自定义模块1234567891011121314151617181920212223#!/usr/bin/env python# -*- coding=utf-8 -*-from ansible.module_utils.basic import *# 导入ansible模块中的基类,必须是*不能指定,否则报错import commands# 创建一个AnsibleModu">
+<meta name="keywords" content="ansible">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring定时任务">
-<meta property="og:url" content="http://yoursite.com/2019/04/14/Spring定时任务/index.html">
+<meta property="og:title" content="ansible学习笔记-自定义module">
+<meta property="og:url" content="http://yoursite.com/2019/11/04/ansible学习笔记-自定义module/index.html">
 <meta property="og:site_name" content="冉小栩的成长记录">
-<meta property="og:description" content="添加配置xmlns:task=”http://www.springframework.org/schema/task&amp;quot;xsi:http://www.springframework.org/schema/taskhttp://www.springframework.org/schema/task/spring-task-3.2.xsd&amp;lt;context:component-scan b">
+<meta property="og:description" content="配置自定义模块位置 编写自定义模块1234567891011121314151617181920212223#!/usr/bin/env python# -*- coding=utf-8 -*-from ansible.module_utils.basic import *# 导入ansible模块中的基类,必须是*不能指定,否则报错import commands# 创建一个AnsibleModu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-14T14:39:16.683Z">
+<meta property="og:image" content="http://yoursite.com/2019/11/04/ansible学习笔记-自定义module/config.png">
+<meta property="og:image" content="http://yoursite.com/2019/11/04/ansible学习笔记-自定义module/test.jpeg">
+<meta property="og:image" content="http://yoursite.com/2019/11/04/ansible学习笔记-自定义module/apply.png">
+<meta property="og:updated_time" content="2019-11-04T06:56:22.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring定时任务">
-<meta name="twitter:description" content="添加配置xmlns:task=”http://www.springframework.org/schema/task&amp;quot;xsi:http://www.springframework.org/schema/taskhttp://www.springframework.org/schema/task/spring-task-3.2.xsd&amp;lt;context:component-scan b">
+<meta name="twitter:title" content="ansible学习笔记-自定义module">
+<meta name="twitter:description" content="配置自定义模块位置 编写自定义模块1234567891011121314151617181920212223#!/usr/bin/env python# -*- coding=utf-8 -*-from ansible.module_utils.basic import *# 导入ansible模块中的基类,必须是*不能指定,否则报错import commands# 创建一个AnsibleModu">
+<meta name="twitter:image" content="http://yoursite.com/2019/11/04/ansible学习笔记-自定义module/config.png">
   
     <link rel="alternative" href="/atom.xml" title="冉小栩的成长记录" type="application/atom+xml">
   
@@ -155,28 +159,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Spring定时任务" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ansible学习笔记-自定义module" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Spring定时任务
+      ansible学习笔记-自定义module
     </h1>
   
 
         
-        <a href="/2019/04/14/Spring定时任务/" class="archive-article-date">
-  	<time datetime="2019-04-14T14:36:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-14</time>
+        <a href="/2019/11/04/ansible学习笔记-自定义module/" class="archive-article-date">
+  	<time datetime="2019-11-04T03:47:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h5><p>xmlns:task=”<a href="http://www.springframework.org/schema/task&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/task&quot;</a><br>xsi:<a href="http://www.springframework.org/schema/task" target="_blank" rel="noopener">http://www.springframework.org/schema/task</a><br><a href="http://www.springframework.org/schema/task/spring-task-3.2.xsd" target="_blank" rel="noopener">http://www.springframework.org/schema/task/spring-task-3.2.xsd</a><br>&lt;context:component-scan base-package=”com.vrveis.roundTrip.task” /&gt;<br><a id="more"></a></p>
-<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><p>1、实现方法上添加@Scheduled注解<br>2、定时器的任务方法不能有返回值<br>3、实现类上要有组件的注解@Component</p>
+        <h5 id="配置自定义模块位置"><a href="#配置自定义模块位置" class="headerlink" title="配置自定义模块位置"></a>配置自定义模块位置</h5><p><img src="/2019/11/04/ansible学习笔记-自定义module/config.png" alt="image"></p>
+<h5 id="编写自定义模块"><a href="#编写自定义模块" class="headerlink" title="编写自定义模块"></a>编写自定义模块</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding=utf-8 -*-</span><br><span class="line"></span><br><span class="line">from ansible.module_utils.basic import *</span><br><span class="line"># 导入ansible模块中的基类,必须是*不能指定,否则报错</span><br><span class="line"></span><br><span class="line">import commands</span><br><span class="line"></span><br><span class="line"># 创建一个AnsibleModule的实例,argument_spec初始化参数为空字典,因为我们这个模块不需要传递参数,所以传递空字典进去就好了.</span><br><span class="line">module = AnsibleModule(</span><br><span class="line">        argument_spec = dict(),</span><br><span class="line">)</span><br><span class="line"># 调用本地系统命令获取时区设置</span><br><span class="line">status,output = commands.getstatusoutput(&apos;&apos;&apos;date +%z&apos;&apos;&apos;)</span><br><span class="line">if status == 0:</span><br><span class="line">        # 按照ansible 的返回格式定义返回内容,stdout为标准输出,changed代表系统有没有东西被变更,rc=0代表执行成功</span><br><span class="line">        result = dict(module=&apos;timezone&apos;,stdout=output,changed=False,rc=0)</span><br><span class="line">        # 使用ansible规则的module实例下的exit_json返回正常内容</span><br><span class="line">        module.exit_json(**result)</span><br><span class="line">else:</span><br><span class="line">        result = dict(msg=&apos;execute failed&apos;,rc=status)</span><br><span class="line">        # 当调用失败返回错误信息的时候,数据字典只要传递msg信息就可了,然后调用module实例的fail_json方法给返回</span><br><span class="line">        module.fail_json(**result)</span><br></pre></td></tr></table></figure>
+<h5 id="测试模块"><a href="#测试模块" class="headerlink" title="测试模块"></a>测试模块</h5><p><img src="/2019/11/04/ansible学习笔记-自定义module/test.jpeg" alt="image"></p>
+<h5 id="在playbook中应用"><a href="#在playbook中应用" class="headerlink" title="在playbook中应用"></a>在playbook中应用</h5><p><img src="/2019/11/04/ansible学习笔记-自定义module/apply.png" alt="image"></p>
 
       
 
@@ -211,11 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ansible</a>
         		</li>
       		
 		</ul>
@@ -271,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/14/Spring定时任务/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/04/ansible学习笔记-自定义module/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/17/java单例模式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java单例模式
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/01/git使用总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git使用总结</div>
+    <a href="/2019/10/21/ansible学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ansible学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
